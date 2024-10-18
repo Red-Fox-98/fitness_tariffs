@@ -1,10 +1,12 @@
 import { NextPage } from "next";
+import MainTemplate from "src/widgets/template/mainTemplate/MainTemplate";
+import HomePage from "src/pagesFsd/homePage/HomePage";
 
 const Home: NextPage = () => {
   return (
-    <div className='desktop:text-blue-500 mobile:text-yellow-600'>
-      <div>{"Home"}</div>
-    </div>
+    <MainTemplate>
+      <HomePage />
+    </MainTemplate>
   );
 };
 
