@@ -1,5 +1,5 @@
 import { FC } from "react";
-import {useAppSelector} from "src/shared/store/hooks";
+import { useAppSelector } from "src/shared/store/hooks";
 
 interface NumberProps {
   number: number;
@@ -7,7 +7,7 @@ interface NumberProps {
 }
 
 const Number: FC<NumberProps> = ({ number, timeUnit }) => {
-  const isLittleTime = useAppSelector(state => state.time.isLittleTime);
+  const isLittleTime = useAppSelector((state) => state.time.isLittleTime);
   return (
     <div className={"w-[64px] h-[64px] flex justify-center font-bebasNeue"}>
       <div className={"w-[49px] h-[60px] text-center text-large leading-[103%] relative"}>

@@ -9,7 +9,7 @@ const initialState: TimeState = {
 };
 
 export const timeSlice = createSlice({
-  name: 'time',
+  name: "time",
   initialState,
   reducers: {
     isLittleTimeSwitch: (state) => {

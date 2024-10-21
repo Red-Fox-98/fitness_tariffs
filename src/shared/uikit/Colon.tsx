@@ -1,8 +1,8 @@
 import { FC } from "react";
-import {useAppSelector} from "src/shared/store/hooks";
+import { useAppSelector } from "src/shared/store/hooks";
 
 const Colon: FC = () => {
-  const isLittleTime = useAppSelector(state => state.time.isLittleTime);
+  const isLittleTime = useAppSelector((state) => state.time.isLittleTime);
   return (
     <svg
       className={`w-[5px] h-[15px] absolute left-[50%] top-[22px] translate-x-[-50%] ${isLittleTime ? "fill-FD4D35" : "fill-01B9C5"}`}
