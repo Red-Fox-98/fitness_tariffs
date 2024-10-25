@@ -7,7 +7,7 @@ interface MainTemplateProps {
 
 const MainTemplate: FC<MainTemplateProps> = ({ children }) => {
   return (
-    <div className={"bg-EBEBEB h-screen"}>
+    <div className={"bg-F5F7F7 h-screen"}>
       <Header />
       <main>{children}</main>
     </div>

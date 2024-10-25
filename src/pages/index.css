@@ -12,10 +12,34 @@
   }
 
   @font-face {
-    font-family: "PT RootUI";
+    font-family: "PT RootUI Bold";
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url("../../public/fonts/PTRootUI/pt-root-ui_bold-BF641923b65e481.ttf") format("truetype");
+    src: url("../../public/fonts/PTRootUI/pt-root-ui_bold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "PT RootUI Medium";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("../../public/fonts/PTRootUI/pt-root-ui_medium.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("../../public/fonts/Rubik/Rubik-Bold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Bebas Neue Cyrillic";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../../public/fonts/BebasNeueCyrillic/BebasNeue-Regular.ttf") format("truetype");
   }
 }

@@ -3,8 +3,8 @@ module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     fill: ({ theme }) => ({
-      "01B9C5": theme("colors.01B9C5"),
-      FD4D35: theme("colors.FD4D35")
+      "01B9C5100": theme("colors.01B9C5100"),
+      "FD4D35": theme("colors.FD4D35")
     }),
     extend: {
       screens: {
@@ -21,22 +21,36 @@ module.exports = {
         }
       },
       fontFamily: {
-        ptRootUI: "PT RootUI",
-        bebasNeue: "Bebas Neue"
+        "ptRootUIBold": "PT RootUI Bold",
+        "ptRootUIMedium": "PT RootUI Medium",
+        "bebasNeue": "Bebas Neue",
+        "Rubik": "Rubik",
+        "bebasNeueCyrillic": "Bebas Neue Cyrillic",
       },
       fontSize: {
-        small: "30px",
-        large: "60px"
+        "small": "30px",
+        "medium": "40px",
+        "large": "50px",
+        "huge": "60px"
       },
       colors: {
+        "FFFFFF": "#FFFFFF",
+        "F5F7F7": "#F5F7F7",
         "2D3242": "#2D3242",
-        EBEBEB: "#EBEBEB",
-        "01B9C5": "#01B9C5",
-        818798: "#818798",
-        FD4D35: "#FD4D35"
+        "EBEBEB": "#EBEBEB",
+        "818798": "#818798",
+        "D3D6DD": "#D3D6DD",
+        "687078": "#687078",
+        "95979F": "#95979F",
+        "FD4D35": "#FD4D35",
+        "01B9C5100": "#01B9C5",
+        "01B9C55": "rgba(1,185,197,0.05)",
+      },
+      backgroundImage: {
+        'star' : "url('../shared/uikit/icons/star.svg')",
       },
       animation: {
-        flashing: "flashing 2s linear infinite"
+        "flashing": "flashing 2s linear infinite"
       },
       keyframes: {
         flashing: {
