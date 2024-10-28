@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { FitnessTariff, FitnessTariffDescription } from "src/shared/api/types";
-import TariffCard from "src/features/homePage/tariffCard/TariffCard";
+import TariffMap from "src/features/homePage/tariffMap/TariffMap";
 
 interface TariffModuleProps {
   tariffs: FitnessTariff[];
@@ -10,7 +10,7 @@ interface TariffModuleProps {
 const TariffModule: FC<TariffModuleProps> = ({ tariffs, tariffsDescription }) => {
   return (
     <div className={"w-[585px]"}>
-      <TariffCard tariffs={tariffs} tariffsDescription={tariffsDescription} />
+      <TariffMap tariffs={tariffs} tariffsDescription={tariffsDescription} />
     </div>
   );
 };

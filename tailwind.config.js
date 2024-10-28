@@ -2,7 +2,7 @@
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
-    fill: ({ theme }) => ({
+    fill: ({theme}) => ({
       "01B9C5100": theme("colors.01B9C5100"),
       "FD4D35": theme("colors.FD4D35")
     }),
@@ -21,6 +21,7 @@ module.exports = {
         }
       },
       fontFamily: {
+        "ptRootUIRegular": "PT RootUI Regular",
         "ptRootUIBold": "PT RootUI Bold",
         "ptRootUIMedium": "PT RootUI Medium",
         "bebasNeue": "Bebas Neue",
@@ -45,17 +46,18 @@ module.exports = {
         "FD4D35": "#FD4D35",
         "01B9C5100": "#01B9C5",
         "01B9C55": "rgba(1,185,197,0.05)",
+        "2D97F9": "#2D97F9",
       },
       backgroundImage: {
-        'star' : "url('../shared/uikit/icons/star.svg')",
+        'star': "url('../shared/uikit/icons/star.svg')",
       },
       animation: {
         "flashing": "flashing 2s linear infinite"
       },
       keyframes: {
         flashing: {
-          "0%, 100%": { opacity: 1 },
-          "50%": { opacity: 0 }
+          "0%, 100%": {opacity: 1},
+          "50%": {opacity: 0}
         }
       }
     }

@@ -42,6 +42,7 @@ const Tariff: FC<TariffProps> = ({ tariff, descriptionTariff, initialTariff }) =
         >
           {`${tariff.name}`}
         </div>
+
         <div className={"h-auto"}>
           <div className={"h-[55px] font-ptRootUIBold text-2D3242 text-large  leading-[110%]"}>{`${tariff.price}₽`}</div>
 

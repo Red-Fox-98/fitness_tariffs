@@ -7,7 +7,7 @@ interface TimeState {
 
 const initialState: TimeState = {
   isLittleTime: false,
-  isPopular: true
+  isPopular: false
 };
 
 export const timeSlice = createSlice({

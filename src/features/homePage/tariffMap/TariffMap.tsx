@@ -1,15 +1,16 @@
 import { FC, useEffect, useState } from "react";
 import { useAppSelector } from "src/shared/store/hooks";
 import { FitnessTariff, FitnessTariffDescription } from "src/shared/api/types";
-import { getDescription, getFilteredTariffs, getInitialTariff } from "src/features/homePage/tariffCard/helper";
+import { getDescription, getFilteredTariffs, getInitialTariff } from "src/features/homePage/tariffMap/helper";
 import Tariff from "src/features/homePage/tariff/Tariff";
+import DescriptionTariffMap from "src/entities/home/descriptionTariffMap/DescriptionTariffMap";
 
 interface TariffCardProps {
   tariffs: FitnessTariff[];
   tariffsDescription: FitnessTariffDescription[];
 }
 
-const TariffCard: FC<TariffCardProps> = ({ tariffs, tariffsDescription }) => {
+const TariffMap: FC<TariffCardProps> = ({ tariffs, tariffsDescription }) => {
   const isPopular = useAppSelector((state) => state.time.isPopular);
   const [filteredTariffs, setFilteredTariffs] = useState(getFilteredTariffs(tariffs, isPopular));
 
@@ -38,8 +39,9 @@ const TariffCard: FC<TariffCardProps> = ({ tariffs, tariffsDescription }) => {
           />
         </div>
       )}
+      <DescriptionTariffMap />
     </div>
   );
 };
 
-export default TariffCard;
+export default TariffMap;
