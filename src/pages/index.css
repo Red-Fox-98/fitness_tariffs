@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+.privacy-policy {
+  input[type="checkbox"] {
+    background-color: #ffffff;
+    width: 24px;
+    height: 24px;
+    appearance: none;
+    border: 1px solid #01b9c5;
+    border-radius: 5px;
+  }
+  input[type="checkbox"]:checked {
+    background-color: #01b9c5;
+    background-repeat: no-repeat;
+    background-image: url("../shared/uikit/icons/Checkbox.svg");
+    background-position: center center;
+  }
+  input[type="checkbox"]:focus {
+    outline: none;
+  }
+  a {
+    color: #2d97f9;
+  }
+}
+
 @layer base {
   @font-face {
     font-family: "Bebas Neue";
@@ -12,10 +35,42 @@
   }
 
   @font-face {
-    font-family: "PT RootUI";
+    font-family: "PT RootUI Bold Regular";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../../public/fonts/PTRootUI/pt-root-ui_regular.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "PT RootUI Bold";
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url("../../public/fonts/PTRootUI/pt-root-ui_bold-BF641923b65e481.ttf") format("truetype");
+    src: url("../../public/fonts/PTRootUI/pt-root-ui_bold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "PT RootUI Medium";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("../../public/fonts/PTRootUI/pt-root-ui_medium.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("../../public/fonts/Rubik/Rubik-Bold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Bebas Neue Cyrillic";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../../public/fonts/BebasNeueCyrillic/BebasNeue-Regular.ttf") format("truetype");
   }
 }

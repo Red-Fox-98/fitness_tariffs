@@ -30,3 +30,4 @@ tsconfig.tsbuildinfo
 .env*
 
 /swagger.json
+/tailwind.config.js

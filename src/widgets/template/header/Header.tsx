@@ -5,7 +5,7 @@ const Header: FC = () => {
   return (
     <div className={"w-screen h-[80px] bg-white flex items-center justify-center"}>
       <div className={"w-[410px] h-[79px] flex items-center gap-[15px]"}>
-        <span className={"font-ptRootUI text-2D3242 text-small leading-[130%] text-nowrap"}>{"Скидка действует:"}</span>
+        <span className={"font-ptRootUIBold text-2D3242 text-small leading-[130%] text-nowrap"}>{"Скидка действует:"}</span>
         <Time />
       </div>
     </div>

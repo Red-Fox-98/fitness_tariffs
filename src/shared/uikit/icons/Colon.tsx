@@ -5,7 +5,7 @@ const Colon: FC = () => {
   const isLittleTime = useAppSelector((state) => state.time.isLittleTime);
   return (
     <svg
-      className={`w-[5px] h-[15px] absolute left-[50%] top-[22px] translate-x-[-50%] ${isLittleTime ? "fill-FD4D35" : "fill-01B9C5"}`}
+      className={`w-[5px] h-[15px] absolute left-[50%] top-[22px] translate-x-[-50%] ${isLittleTime ? "fill-FD4D35" : "fill-01B9C5100"}`}
       width='5'
       height='15'
       viewBox='0 0 5 15'
