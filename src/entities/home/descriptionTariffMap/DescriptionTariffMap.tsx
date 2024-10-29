@@ -11,8 +11,8 @@ const DescriptionTariffMap: FC = () => {
       <div className={"font-ptRootUIMedium text-[18px] leading-[130%] text-2D3242 mb-[26px]"}>
         {"Следуя плану на 3 месяца, люди получают в 2 раза лучший результат, чем за 1 месяц"}
       </div>
-      <div className={"privacy-policy w-[454px] mb-[50px] flex gap-[12px] items-center text-818798"}>
-        <input type={"checkbox"} checked />
+      <div className={"privacy-policy w-[454px] mb-[50px] flex gap-[12px] items-center text-818798 leading-[100%]"}>
+        <input type={"checkbox"} checked readOnly/>
         {parse(mdParser.render("Я соглашаюсь с [Правилами сервиса]() и  условиями [Публичной оферты](). "))}
       </div>
       <Button value={"Купить"} buttonSize={"small"} />
