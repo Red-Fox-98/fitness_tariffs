@@ -33,9 +33,9 @@ const SalePopup: FC<SalePopupProps> = ({ tariffs, sales }) => {
             <div className={"font-ptRootUIMedium text-[24px] leading-[130%]"}>
               {"Посмотри, что мы для тебя приготовили 🔥"}
             </div>
-            <TariffMapSalePopup tariffs={tariffs} sales={sales}/>
+            <TariffMapSalePopup tariffs={tariffs} sales={sales} />
             <div className={"flex justify-center pt-[20px]"}>
-              <Button value={"Начать тренироваться"} buttonSize={"large"}/>
+              <Button value={"Начать тренироваться"} buttonSize={"large"} />
             </div>
           </div>
         </div>
