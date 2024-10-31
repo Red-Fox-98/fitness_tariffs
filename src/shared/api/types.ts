@@ -17,3 +17,10 @@ export interface FitnessTariffDescription {
   name: string;
   description: string;
 }
+
+export interface FitnessTariffSale {
+  name: string;
+  isDiscount: boolean;
+  isPopular: boolean;
+  sale: number;
+}

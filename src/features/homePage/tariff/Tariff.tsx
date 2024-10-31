@@ -1,15 +1,15 @@
 import { FC } from "react";
-import { FitnessTariff, FitnessTariffDescription } from "src/shared/api/types";
-import { getSale } from "src/features/homePage/tariff/helper";
+import { FitnessTariff } from "src/shared/api/types";
 import { useAppSelector } from "src/shared/store/hooks";
 
 interface TariffProps {
   tariff: FitnessTariff;
-  descriptionTariff: FitnessTariffDescription | undefined;
-  initialTariff: FitnessTariff | undefined;
+  description: string;
+  priceInitial: number;
+  sale: number;
 }
 
-const Tariff: FC<TariffProps> = ({ tariff, descriptionTariff, initialTariff }) => {
+const Tariff: FC<TariffProps> = ({ tariff, description, priceInitial, sale }) => {
   const isPopular = useAppSelector((state) => state.time.isPopular);
   const isForever = tariff.name.toLowerCase() === "навсегда";
 
@@ -28,7 +28,7 @@ const Tariff: FC<TariffProps> = ({ tariff, descriptionTariff, initialTariff }) =
           }
         >
           <div className={"font-ptRootUIMedium text-FFFFFF text-[19px] leading-[130%]"}>
-            {`${-getSale(tariff.price, Number(initialTariff?.price))}%`}
+            <div>{`${-sale}%`}</div>
           </div>
         </div>
       )}
@@ -49,7 +49,7 @@ const Tariff: FC<TariffProps> = ({ tariff, descriptionTariff, initialTariff }) =
           {isPopular && (
             <div className={"flex justify-end"}>
               <div className={"relative w-auto font-ptRootUIMedium text-95979F text-[24px]"}>
-                {`${initialTariff?.price}₽`}
+                {`${priceInitial}₽`}
                 <div className={"absolute w-full h-[1.2px] top-0 left-0 right-0 bottom-0 bg-95979F my-auto"}></div>
               </div>
             </div>
@@ -63,7 +63,7 @@ const Tariff: FC<TariffProps> = ({ tariff, descriptionTariff, initialTariff }) =
           ` ${isForever ? "w-[161px] top-[25px] right-[52px] bottom-[37px]" : "w-[118px] left-[50%] bottom-[23px] translate-x-[-50%] text-center"}`
         }
       >
-        {descriptionTariff?.description}
+        {description}
       </div>
     </div>
   );

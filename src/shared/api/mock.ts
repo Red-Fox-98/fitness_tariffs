@@ -1,4 +1,4 @@
-import { FitnessTariff, FitnessTariffDescription } from "src/shared/api/types";
+import { FitnessTariff, FitnessTariffDescription, FitnessTariffSale } from "src/shared/api/types";
 
 export const fitnessTariffsMock: FitnessTariff[] = [
   {
@@ -173,5 +173,50 @@ export const fitnessTariffDescriptionMock: FitnessTariffDescription[] = [
   {
     name: "навсегда",
     description: "Всегда быть в форме и поддерживать своё здоровье ⭐️"
+  }
+];
+
+export const fitnessTariffSaleMock: FitnessTariffSale[] = [
+  {
+    name: "1 неделя",
+    isPopular: true,
+    isDiscount: false,
+    sale: 30
+  },
+  {
+    name: "1 месяц",
+    isPopular: true,
+    isDiscount: false,
+    sale: 40
+  },
+  {
+    name: "3 месяца",
+    isPopular: true,
+    isDiscount: false,
+    sale: 50
+  },
+  {
+    name: "навсегда",
+    isPopular: true,
+    isDiscount: false,
+    sale: 70
+  },
+  {
+    name: "1 неделя",
+    isPopular: false,
+    isDiscount: true,
+    sale: 40
+  },
+  {
+    name: "1 месяц",
+    isPopular: false,
+    isDiscount: true,
+    sale: 50
+  },
+  {
+    name: "3 месяца",
+    isPopular: false,
+    isDiscount: true,
+    sale: 60
   }
 ];
