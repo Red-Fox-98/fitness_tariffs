@@ -3,11 +3,13 @@ import { createSlice } from "@reduxjs/toolkit";
 interface TimeState {
   isLittleTime: boolean;
   isPopular: boolean;
+  isDiscount: boolean;
 }
 
 const initialState: TimeState = {
   isLittleTime: false,
-  isPopular: false
+  isPopular: false,
+  isDiscount: false
 };
 
 export const timeSlice = createSlice({
@@ -20,12 +22,15 @@ export const timeSlice = createSlice({
     isPopularSwitch: (state) => {
       state.isPopular = !state.isPopular;
     },
+    isDiscountSwitch: (state) => {
+      state.isDiscount = !state.isDiscount;
+    },
     timeSwitchByAmount: (state, action) => {
       [state.isLittleTime] = action.payload;
     }
   }
 });
 
-export const { isLittleTimeSwitch, isPopularSwitch, timeSwitchByAmount } = timeSlice.actions;
+export const { isLittleTimeSwitch, isPopularSwitch, isDiscountSwitch, timeSwitchByAmount } = timeSlice.actions;
 
 export default timeSlice.reducer;

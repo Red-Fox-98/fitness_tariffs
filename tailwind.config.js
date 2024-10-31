@@ -25,7 +25,8 @@ module.exports = {
         "ptRootUIBold": "PT RootUI Bold",
         "ptRootUIMedium": "PT RootUI Medium",
         "bebasNeue": "Bebas Neue",
-        "Rubik": "Rubik",
+        "rubikBold": "Rubik Bold",
+        "rubikMedium": "Rubik Medium",
         "bebasNeueCyrillic": "Bebas Neue Cyrillic",
       },
       fontSize: {
@@ -42,14 +43,18 @@ module.exports = {
         "818798": "#818798",
         "D3D6DD": "#D3D6DD",
         "687078": "#687078",
+        "E7EAF1": "#E7EAF1",
         "95979F": "#95979F",
         "FD4D35": "#FD4D35",
         "01B9C5100": "#01B9C5",
-        "01B9C55": "rgba(1,185,197,0.05)",
         "2D97F9": "#2D97F9",
+        "12191D": "#12191D",
+        "01B9C55": "rgba(1,185,197,0.05)",
+        "0000005": "rgba(0,0,0,0.5)",
       },
       backgroundImage: {
         'star': "url('../shared/uikit/icons/star.svg')",
+        'starPopup': "url('../shared/uikit/icons/starPopup.svg')",
       },
       animation: {
         "flashing": "flashing 2s linear infinite"

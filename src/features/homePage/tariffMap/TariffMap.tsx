@@ -1,16 +1,17 @@
 import { FC, useEffect, useState } from "react";
 import { useAppSelector } from "src/shared/store/hooks";
-import { FitnessTariff, FitnessTariffDescription } from "src/shared/api/types";
-import { getDescription, getFilteredTariffs, getInitialTariff } from "src/features/homePage/tariffMap/helper";
+import { FitnessTariff, FitnessTariffDescription, FitnessTariffSale } from "src/shared/api/types";
+import { getDescription, getFilteredTariffs, getInitialTariff, getSale } from "src/features/homePage/tariffMap/helper";
 import Tariff from "src/features/homePage/tariff/Tariff";
 import DescriptionTariffMap from "src/entities/home/descriptionTariffMap/DescriptionTariffMap";
 
 interface TariffCardProps {
   tariffs: FitnessTariff[];
-  tariffsDescription: FitnessTariffDescription[];
+  sales: FitnessTariffSale[];
+  descriptions: FitnessTariffDescription[];
 }
 
-const TariffMap: FC<TariffCardProps> = ({ tariffs, tariffsDescription }) => {
+const TariffMap: FC<TariffCardProps> = ({ tariffs, sales, descriptions }) => {
   const isPopular = useAppSelector((state) => state.time.isPopular);
   const [filteredTariffs, setFilteredTariffs] = useState(getFilteredTariffs(tariffs, isPopular));
 
@@ -25,8 +26,9 @@ const TariffMap: FC<TariffCardProps> = ({ tariffs, tariffsDescription }) => {
           <Tariff
             key={tariff.id}
             tariff={tariff}
-            descriptionTariff={getDescription(tariffsDescription, tariff.name)}
-            initialTariff={getInitialTariff(tariffs, tariff.name)}
+            description={getDescription(descriptions, tariff.name)}
+            priceInitial={getInitialTariff(tariffs, tariff.name)}
+            sale={getSale(tariff, sales)}
           />
         ))}
       </div>
@@ -34,8 +36,9 @@ const TariffMap: FC<TariffCardProps> = ({ tariffs, tariffsDescription }) => {
         <div className={"pt-[40px]"}>
           <Tariff
             tariff={filteredTariffs[3]}
-            descriptionTariff={getDescription(tariffsDescription, filteredTariffs[3].name)}
-            initialTariff={getInitialTariff(tariffs, filteredTariffs[3].name)}
+            description={getDescription(descriptions, filteredTariffs[3].name)}
+            priceInitial={getInitialTariff(tariffs, filteredTariffs[3].name)}
+            sale={getSale(filteredTariffs[3], sales)}
           />
         </div>
       )}
