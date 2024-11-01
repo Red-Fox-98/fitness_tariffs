@@ -10,7 +10,7 @@ interface TariffModuleProps {
 
 const TariffModule: FC<TariffModuleProps> = ({ tariffs, sales, descriptions }) => {
   return (
-    <div className={"w-[585px]"}>
+    <div className={"w-[585px] xs:w-[375px] xs:pb-[20px]"}>
       <TariffMap tariffs={tariffs} sales={sales} descriptions={descriptions} />
     </div>
   );

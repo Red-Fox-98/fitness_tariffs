@@ -20,8 +20,8 @@ const TariffMap: FC<TariffCardProps> = ({ tariffs, sales, descriptions }) => {
   }, [tariffs, isPopular]);
 
   return (
-    <div className={"flex flex-col"}>
-      <div className={"grid gap-[12px] grid-cols-3"}>
+    <div className={"flex flex-col xs:mx-auto xs:w-[375px]"}>
+      <div className={"grid gap-[12px] grid-cols-3 xs:flex xs:flex-col"}>
         {filteredTariffs.slice(0, 3).map((tariff) => (
           <Tariff
             key={tariff.id}
@@ -33,7 +33,7 @@ const TariffMap: FC<TariffCardProps> = ({ tariffs, sales, descriptions }) => {
         ))}
       </div>
       {filteredTariffs[3] && (
-        <div className={"pt-[40px]"}>
+        <div className={"pt-[40px] xs:pt-[10px]"}>
           <Tariff
             tariff={filteredTariffs[3]}
             description={getDescription(descriptions, filteredTariffs[3].name)}

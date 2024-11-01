@@ -11,7 +11,7 @@ interface MainTemplateProps {
 const MainTemplate: FC<MainTemplateProps> = ({ children }) => {
   const isDiscount = useAppSelector((state) => state.time.isDiscount);
   return (
-    <div className={"bg-F5F7F7 h-screen relative"}>
+    <div className={"bg-F5F7F7 h-screen xs:h-fit relative"}>
       <Header />
       <main>{children}</main>
       {isDiscount && <SalePopup tariffs={fitnessTariffsMock} sales={fitnessTariffSaleMock} />}

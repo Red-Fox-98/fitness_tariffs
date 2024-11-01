@@ -22,20 +22,25 @@ const SalePopup: FC<SalePopupProps> = ({ tariffs, sales }) => {
 
   return (
     <Popup onClose={handleClose}>
-      <div className={"relative w-[750px] h-[658px] bg-F5F7F7"}>
+      <div className={"relative w-[750px] h-[658px] xs:w-[335px] xs:h-[778px] bg-F5F7F7"}>
         <ButtonClose onClick={handleClose} />
         <SpecialOffer />
-        <div className={"flex flex-col gap-[40px]"}>
+        <div className={"flex flex-col gap-[40px] xs:gap-[26px]"}>
           <div className={"flex justify-center"}>
             <DescriptionSalePopup />
           </div>
-          <div className={"w-[670px] h-[248px] pl-[40px] flex flex-col gap-[20px]"}>
-            <div className={"font-ptRootUIMedium text-[24px] leading-[130%]"}>
+          <div
+            className={
+              "w-[670px] h-[248px] pl-[40px] flex flex-col gap-[20px] xs:gap-[14px] " +
+              "xs:w-[335px] xs:h-auto xs:items-center xs:pl-0"
+            }
+          >
+            <div className={"font-ptRootUIMedium text-[24px] leading-[130%] " + "xs:text-[15px]"}>
               {"Посмотри, что мы для тебя приготовили 🔥"}
             </div>
             <TariffMapSalePopup tariffs={tariffs} sales={sales} />
-            <div className={"flex justify-center pt-[20px]"}>
-              <Button value={"Начать тренироваться"} buttonSize={"large"} />
+            <div className={"flex justify-center pt-[20px] xs:pt-[6px]"}>
+              <Button value={"Начать тренироваться"} buttonSize={"popup"} />
             </div>
           </div>
         </div>

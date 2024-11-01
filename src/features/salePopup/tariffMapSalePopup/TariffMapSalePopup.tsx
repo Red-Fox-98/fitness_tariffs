@@ -22,7 +22,7 @@ const TariffMapSalePopup: FC<TariffCardProps> = ({ tariffs, sales }) => {
   };
 
   return (
-    <div className={"flex gap-[20px]"}>
+    <div className={"flex w-fit gap-[20px] xs:flex-col xs:gap-[2px]"}>
       {filteredTariffs.map((tariff) => (
         <TariffSalePopup
           key={tariff.id}
