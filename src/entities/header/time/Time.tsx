@@ -6,7 +6,7 @@ import { getIsFlashing, timeChange, timeOutput } from "src/entities/header/time/
 import { isDiscountSwitch, isLittleTimeSwitch, isPopularSwitch } from "src/shared/store/Time/slice";
 
 const Time: FC = () => {
-  const [time, setTime] = useState(35);
+  const [time, setTime] = useState(120);
   const [minute, second] = [Math.floor(time / 60), time % 60];
   const isLittleTime = useAppSelector((state) => state.time.isLittleTime);
   const isPopular = useAppSelector((state) => state.time.isPopular);

@@ -160,7 +160,7 @@ export const fitnessTariffsMock: FitnessTariff[] = [
 export const fitnessTariffDescriptionMock: FitnessTariffDescription[] = [
   {
     name: "1 неделя",
-    description: `Чтобы просто начать 👍🏻`
+    description: "Чтобы просто начать 👍🏻"
   },
   {
     name: "1 месяц",
@@ -172,7 +172,7 @@ export const fitnessTariffDescriptionMock: FitnessTariffDescription[] = [
   },
   {
     name: "навсегда",
-    description: "Всегда быть в форме и поддерживать своё здоровье ⭐️"
+    description: "Всегда быть в форме и поддерживать своё здоровье ⭐"
   }
 ];
 
