@@ -53,9 +53,9 @@ module.exports = {
         "0000005": "rgba(0,0,0,0.5)",
       },
       backgroundImage: {
-        'starLarge': "url('../shared/uikit/icons/StarLarge.svg')",
-        'starMedium': "url('../shared/uikit/icons/StarMedium.svg')",
-        'starSmall': "url('../shared/uikit/icons/StarSmall.svg')",
+        'starLarge': "url('../shared/uiKit/icons/StarLarge.svg')",
+        'starMedium': "url('../shared/uiKit/icons/StarMedium.svg')",
+        'starSmall': "url('../shared/uiKit/icons/StarSmall.svg')",
       },
       animation: {
         "flashing": "flashing 2s linear infinite"
