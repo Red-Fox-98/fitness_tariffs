@@ -1,7 +1,7 @@
 {
   "name": "fitness_tariffs",
   "version": "1.0.0",
-  "description": "",
+  "description": "App to display fitness rates",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
